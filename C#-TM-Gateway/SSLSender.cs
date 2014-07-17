@@ -20,6 +20,7 @@ using System.Net.Security;
 using System.IO;
 using System.Net.Sockets;
 using System.Security.Cryptography.X509Certificates;
+using Starksoft.Net.Proxy;
 
 namespace CSharp_TM_Gateway
 {
@@ -35,7 +36,9 @@ namespace CSharp_TM_Gateway
 		public SSLSender (ReceiverSSL SSLrec)
 		{
 			r = SSLrec;
-			clientConn = new TcpClient(MainClass.host, 6697);
+			//clientConn = new TcpClient(MainClass.host, 6697);
+			Socks4aProxyClient proxy = new Socks4aProxyClient("127.0.0.1", 9050);
+			clientConn = proxy.CreateConnection(MainClass.host, 6697);
 			networkStream = clientConn.GetStream();
 			sslCo = new SslStream(networkStream, false, new RemoteCertificateValidationCallback(trustCert));
 			sslCo.AuthenticateAsClient(MainClass.host);

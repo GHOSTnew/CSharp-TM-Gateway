@@ -26,7 +26,6 @@ using System.Threading;
 
 /**
  * TO-DO:
- * - socks5 support
  * - if user use Tor disconnect him
  * - comming soon
  **/
@@ -34,7 +33,7 @@ namespace CSharp_TM_Gateway
 {
 	class MainClass
 	{
-		public static string host = "。。。";
+		public static string host = "oghzthm3fgvkh5wo.onion";
 		public static string version = "0.1";
 		public static string dogeaddress = "DMP3meY5fy2ydX45qyXoexw1oLKkSpJYbG";
 		public static bool run = true;

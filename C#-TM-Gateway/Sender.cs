@@ -18,6 +18,7 @@
 using System;
 using System.Net.Sockets;
 using System.IO;
+using Starksoft.Net.Proxy;
 
 namespace CSharp_TM_Gateway
 {
@@ -31,7 +32,8 @@ namespace CSharp_TM_Gateway
 		public Sender (Receiver rec)
 		{
 			r = rec;
-			clientConn = new TcpClient(MainClass.host, 6667);
+			Socks4aProxyClient proxy = new Socks4aProxyClient("127.0.0.1", 9050);
+			clientConn = proxy.CreateConnection(MainClass.host, 6667);
 			networkStream = clientConn.GetStream();
 			writer = new StreamWriter(networkStream);
 			reader = new StreamReader(networkStream);

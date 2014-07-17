@@ -7,10 +7,10 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyTitle("C#-TM-Gateway")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("")]
+[assembly: AssemblyCompany("Team Mondial")]
+[assembly: AssemblyProduct("C#-TM-Gateway")]
 [assembly: AssemblyCopyright("ghostnew")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("Copyleft GHOSTnew 2014")]
 [assembly: AssemblyCulture("")]
 
 // The assembly version has the format "{Major}.{Minor}.{Build}.{Revision}".
